@@ -12,5 +12,6 @@
 	<h3>Description: ${book.description}</h3>
 	<h3>Language: ${book.language}</h3>
 	<h3>Number of Pages: ${book.numberOfPages}</h3>
+	<a href="http://localhost:8080/books">All Books</a>
 </body>
 </html>

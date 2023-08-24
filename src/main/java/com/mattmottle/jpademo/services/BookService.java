@@ -33,10 +33,11 @@ public class BookService {
             return null;
         }
     }
-    // updates book
-    public Book updateBook(Book book) {
-    	return bookRepository.save(book); 
+    // find by title
+    public List<Book> findAllByTitle(String title) {
+    	return bookRepository.findByTitle(title);
     }
+    // updates book
     public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
 			Book book = new Book();
 			book.setId(id);

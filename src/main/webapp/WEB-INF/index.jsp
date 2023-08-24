@@ -35,6 +35,7 @@
 			</c:forEach>
 		  </tbody>
 	</table>
+	<a href="http://localhost:8080/books/create">Add a Book</a>
 	</div>
 </body>
 </html>
