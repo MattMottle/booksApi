@@ -38,20 +38,11 @@ public class BookService {
     	return bookRepository.findByTitle(title);
     }
     // updates book
-    public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
-			Book book = new Book();
-			book.setId(id);
-			book.setTitle(title);
-			book.setDescription(desc);
-			book.setLanguage(lang);
-			book.setNumberOfPages(numOfPages);
-			return bookRepository.save(book);
+    public Book updateBook(Book updatedBook) {
+			return bookRepository.save(updatedBook);
 	}
     // deletes book
     public void deleteBook(Long id) {
-		Optional<Book> optionalBook = bookRepository.findById(id);
-		if(optionalBook.isPresent()) {
-			bookRepository.deleteById(id);
-		}
+		bookRepository.deleteById(id);	
 	}
 }

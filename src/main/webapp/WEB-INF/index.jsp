@@ -13,7 +13,7 @@
 <body>
 	<div class="container">
 		<h1> All Books</h1>
-		<table class="table table-striped" style="width: 700px;">
+		<table class="table table-striped" style="width: 900px;">
 		  <thead>
 		    <tr>
 		      <th scope="col">ID</th>
@@ -21,6 +21,7 @@
 		      <th scope="col">Description</th>
 		      <th scope="col">Language</th>
 		      <th scope="col">Pages</th>
+		      <th scope="col">Actions</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -31,6 +32,11 @@
 			      <td><c:out value="${book.description}"/></td>
 			      <td><c:out value="${book.language}"/></td>
 			      <td><c:out value="${book.numberOfPages}"/></td>
+			      <td><a href="http://localhost:8080/books/${book.id}/edit">Edit</a> | 
+			      <form action="/books/${book.id}/delete" method="post">
+			      	<input type="hidden" name="_method" value="delete" />
+			      	<button class="delete">Delete</button>
+			      </form></td>
 			    </tr>
 			</c:forEach>
 		  </tbody>

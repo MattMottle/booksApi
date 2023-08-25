@@ -7,3 +7,12 @@
 	justify-content: center;
 	align-items: center;
 }
+.delete {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: arial, sans-serif;
+  color: #3366CC;
+  text-decoration: underline;
+  cursor: pointer;
+}
